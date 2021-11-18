@@ -21,6 +21,11 @@ public class StampaNumeriDispari {
 		//creazione numeri
 		for(int i = 0; i < lista.length ; i ++) {
 			lista[i] = randomGenerator.nextInt(100);
+			
+			if (lista[i] > 10 && lista[i] < 50) {
+				
+				sommaNumeri += lista[i];
+			}
 		
 			
 			
@@ -30,11 +35,22 @@ public class StampaNumeriDispari {
 				numeriDispari += 1;
 			}else {
 				numeriPari += 1;
+				System.out.print(lista[i] + "  ");
 			}
 			
+			
+			
 		}
+		
+//		for (int somm= 0; somm < n-1 ;somm ++ ) {
+//			
+//			if (lista[somm] >)
+//			sommaNumeri += lista[somm];
+//		}
+		
 		System.out.println("Il numero di numeri Dispari è " + numeriDispari);
 		System.out.println("Il numeri di numeri Pari è " + numeriPari);
+		System.out.println("la somma dei numeri compresi tra 10 e 50 è " + sommaNumeri);
 		
 		
 		
